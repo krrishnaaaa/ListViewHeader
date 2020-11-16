@@ -1,8 +1,9 @@
 package com.pcsalt.example.listviewheader;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.pcsalt.example.listviewheader.adapter.SectionedBaseAdapter;
 import com.pcsalt.example.listviewheader.model.ListData;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void prepareContent() {
         for (int i = 0; i < 100; i++) {
-            if (i == 0 || i % 7 == 0) {
+            if (i % 7 == 0) {
                 ListSection listSection = new ListSection();
                 listSection.setTitle("Title: " + i);
                 dataList.add(listSection);
